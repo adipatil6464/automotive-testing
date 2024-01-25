@@ -1,0 +1,207 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div style="align-items: center;justify-content: center;">
+      <form style="margin: 20px; width: 80%;" method="post">
+        {% csrf_token %}
+            <div class="form-floating" style="padding: 10px;">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Password" name="dimensions">
+                <label for="floatingInput" style="margin-left: 20px; margin-top: 10px;">dimensions</label>
+              </div>
+
+              <div class="form-floating" style="padding: 10px;">
+                <input type="number" min='1' class="form-control" id="floatingInput" placeholder="Password" name="passenger">
+                <label for="floatingInput" style="margin-left: 20px; margin-top: 10px;">passenger</label>
+              </div>
+              
+              
+              <div class="form-floating" style="padding: 10px;">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name='engine_type'>
+                  <option value="option1" selected>Inline engine</option>
+                  <option value="option2" >Cylinder configuration</option>
+                  <option value="option3" >V engine</option>
+                  <option value="option4" >V8 engine</option>
+                  <option value="option5" >Four</option>
+                  <option value="option6" >OPOC engine</option>
+                  <option value="option7" >Petrol engine</option>
+                  <option value="option8" >Single cylinder engine</option>
+                  <option value="option9" >Six-cylinder</option>
+                  <option value="option10" >Stroke engine</option>
+                  <option value="option11" >Diesel engine</option>
+                  <option value="option12" >Compression ignition</option>
+                  <option value="option13" >Electric motor</option>
+                  <option value="option14" >Straight-five engine</option>
+                  <option value="option15" >Gas engine</option>
+                  </select>
+                <label for="floatingSelect" style="margin: 5px;">engine Type</label>
+              </div>
+
+              <div class='row'>
+              <div class="form-floating col" style="padding: 10px;">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Password" name="fuel_consumpsion">
+                <label for="floatingInput" style="margin-left: 20px; margin-top: 10px;">fuel consumpsion</label>
+              </div>
+              <div class="form-floating col" style="padding: 10px;">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Password" name="alternate_fuel_consumption">
+                <label for="floatingInput" style="margin-left: 20px; margin-top: 10px;">alterante fuel consumpsion</label>
+              </div>
+            </div>
+
+            <div class="form-floating" style="padding: 10px;">
+              <input type="number" min='0' class="form-control" id="floatingInput" placeholder="Password" name="airbags_count" style='width:590px;'>
+              <label for="floatingInput" style="margin-left: 20px; margin-top: 10px;">airbags count</label>
+            </div>
+            
+            <div class='row'>
+            <div class="form-floating col" style="padding: 10px;">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name='infotainment_system'>
+                <option value="option1" selected>manual</option>
+                <option value="option2">touch</option>
+              </select>
+              <label for="floatingSelect" style='margin:10px'>infotainment system</label>
+            </div>
+
+            <div class="form-floating col" style="padding: 10px;">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name='gears_type'>
+                <option value="manual" selected>manual</option>
+                <option value="automatic">automatic</option>
+              </select>
+              <label for="floatingSelect" style='margin:10px'>gears type</label>
+            </div>
+          </div>
+
+          <div class="form-floating" style="padding: 10px;">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name='car_type'>
+              <option value="option1" selected>Sedan</option>
+              <option value="option2" >SUV</option>
+              <option value="option3" >Pickup</option>
+              <option value="option4" >Wagon</option>
+              <option value="option5" >Minivan</option>
+              <option value="option6" >Sports car</option>
+              <option value="option7" >Utility vehicle</option>
+              <option value="option8" >MPV</option>
+              <option value="option9" >MPV</option>
+              <option value="option10" >Van</option>
+              <option value="option11" >Electric</option>
+              <option value="option12" >Hybrid</option>
+              </select>
+            <label for="floatingSelect" style="margin: 5px;">car Type</label>
+          </div>
+
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name='ADAS' style='width:590px;'>
+              <option value="option1" selected>yes</option>
+              <option value="option2">no</option>
+            </select>
+            <label for="floatingSelect">ADAS System</label>
+          </div>
+
+          <div class='row'>
+            <div class='col'>
+          <label for="customRange3" class="form-label">Example range</label>
+          <input type="range" class="form-range" min="0" max="5" step="0.1" id="customRange1" name='Safety_Ratings'>
+            </div>
+            <div class='col'>
+          <h4>Value: <span id="demo"></span></h4>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class='col'>
+          <label for="customRange3" class="form-label">Example range</label>
+          <input type="range" class="form-range" min="0" max="5" step="0.1" id="customRange4" name='Fuel_Efficiency_Ratings'>
+            </div>
+            <div class='col'>
+          <h4>Value: <span id="demo3"></span></h4>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class='col'>
+          <label for="customRange3" class="form-label">Example range</label>
+          <input type="range" class="form-range" min="0" max="5" step="0.1" id="customRange2" name='environment_safety'>
+            </div>
+            <div class='col'>
+          <h4>Value: <span id="demo1"></span></h4>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class='col'>
+          <label for="customRange3" class="form-label">Example range</label>
+          <input type="range" class="form-range" min="0" max="5" step="0.1" id="customRange3" name='Performance_Ratings'>
+            </div>
+            <div class='col'>
+          <h4>Value: <span id="demo2"></span></h4>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+
+          
+          <script>
+            var slider = document.getElementById("customRange1");
+            var output = document.getElementById("demo");
+            var slider1 = document.getElementById("customRange2");
+            var output1 = document.getElementById("demo1");
+            var slider2 = document.getElementById("customRange3");
+            var output2 = document.getElementById("demo2");
+            var slider3 = document.getElementById("customRange4");
+            var output3 = document.getElementById("demo3");
+            output.innerHTML = slider.value;
+            output1.innerHTML = slider1.value;
+            output2.innerHTML = slider2.value;
+            output3.innerHTML = slider3.value;
+            
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            }
+            slider1.oninput = function() {
+              output1.innerHTML = this.value;
+            }
+            slider2.oninput = function() {
+              output2.innerHTML = this.value;
+            }
+            slider3.oninput = function() {
+              output3.innerHTML = this.value;
+            }
+
+            </script> 
+
+</body>
+</html>
+    
+</body>
+</html>

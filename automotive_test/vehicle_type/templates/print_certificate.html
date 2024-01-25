@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.company_name }} Motors - {{ data.model_name }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        #stamp {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        #copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (max-width: 600px) {
+            #container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="ratings">
+        <div id="container">
+
+            <h1>{{ data.company_name }} Motors - {{ data.model_name }}</h1>
+ 
+
+    <h2>Safety Ratings</h2>
+    <p>{{ data.model_name }} Safety Ratings assess its protection level in crashes, considering airbag effectiveness, structural integrity, and safety features.</p>
+    <div>
+        <label style="font-weight:normal; font-size:50px;">{{data.Safety_Ratings}}/5.0</label>
+        <label>stars</label>
+      </div>
+    <h2>Environment Safety</h2>
+    <p>{{ data.model_name }} Environment Safety Ratings evaluate its impact on the environment, focusing on emissions, fuel efficiency, and eco-friendly features.</p>
+    <div>
+        <label style="font-weight:normal; font-size:50px;">{{data.environment_safety}}/5.0</label>
+        <label>stars</label>
+      </div>
+    <h2>Performance Ratings</h2>
+    <p>{{ data.model_name }} Performance Ratings gauge its overall driving capabilities, including acceleration, handling, and braking.</p>
+    <div>
+        <label style="font-weight:normal; font-size:50px;">{{data.Performance_Ratings}}/5.0</label>
+        <label>stars</label>
+      </div>
+    <h2>Fuel Efficiency Ratings</h2>
+    <p>{{ data.model_name }} Fuel Efficiency Ratings quantify its ability to maximize fuel usage, indicating how efficiently it converts fuel into energy for propulsion.</p>
+    <div>
+        <label style="font-weight:normal; font-size:50px;">{{data.Fuel_Efficiency_Ratings}}/5.0</label>
+        <label>stars</label>
+      </div>
+      <img id="stamp" src="https://img.freepik.com/free-vector/grunge-original-seal-stamp-rubber-look_78370-667.jpg" alt="Stamp Image">
+        
+        <div id="copyright">
+            &copy; 2024 {{ data.company_name }} Motors. All rights reserved.
+        </div>
+</div>
+
+    </div>
+    <button onclick="printPage('ratings')">print</button>
+
+    <br><br>
+    
+    <div id="details">
+    <div id="container">
+
+        <h1>{{ data.company_name }} Motors - {{ data.model_name }}</h1>
+
+        <h2>Introduction</h2>
+
+        <p>{{ data.company_name }} Motors, a leading automotive company, takes pride in introducing its latest model, the "<span class="highlight">{{ data.model_name }}</span>." This cutting-edge vehicle sets new standards in the automotive industry with its impressive dimensions,
+            sleek design, and advanced features. The <span class="highlight">{{ data.model_name }}</span> is a testament to {{ data.company_name }} Motors' commitment to delivering excellence in every aspect of its vehicles.</p>
+
+        <h2>Key Features</h2>
+
+        <p>Measuring at optimum dimensions as {{ data.dimensions }}, the <span class="highlight">{{ data.model_name }}</span> offers a spacious and comfortable ride for passengers having a capacity of {{ data.passenger }}, ensuring an enjoyable driving experience. The model boasts
+            a state-of-the-art {{ data.get_engine_type_display }}, exemplifying the company's dedication to performance and efficiency. The engine type not only provides a powerful drive and having fuel consumpsion of {{ data.fuel_consumpsion }} with or without alternate fuel option
+            {{ data.alternate_fuel_consumption }} with {{ data.gears_type }} gears transmission, reflecting {{ data.company_name }} Motors' commitment to sustainability.
+
+        </p>
+        <p>airbags count on machine: {{ data.airbags_count }}
+            <br>
+            infotainment system installed: {{ data.get_infotainment_system_display }}
+            <br>
+            ADAS function: {{ data.get_ADAS_display }}
+        </p>
+
+        <!-- Additional sections go here -->
+
+        <h2>Conclusion</h2>
+
+        <p>Catering to various preferences and lifestyles, the <span class="highlight">{{ data.model_name }}</span> is a {{ data.get_car_type_display }} vehicle. Whether this model adapts to different driving needs, showcasing {{ data.company_name }} Motors' commitment to versatility and customer satisfaction.</p>
+
+        <p>In conclusion, the <span class="highlight">{{ data.model_name }}</span> from {{ data.company_name }} Motors is not just a car; it's a statement of innovation and excellence in the automotive industry. With its impressive dimensions, advanced features, and focus on safety and sustainability, this model redefines the driving experience for discerning customers.</p>
+        <img id="stamp" src="https://img.freepik.com/free-vector/grunge-original-seal-stamp-rubber-look_78370-667.jpg" alt="Stamp Image">
+        
+        <div id="copyright">
+            &copy; 2024 {{ data.company_name }} Motors. All rights reserved.
+        </div>
+    </div>
+    </div>
+    
+    <button onclick="printPage('details')">print</button>
+
+    <script>
+    function printPage(ele){
+        let backup = document.body.innerHTML;
+            let divcontent = document.getElementById(ele).innerHTML;
+            document.body.innerHTML = divcontent;
+            window.print();
+            document.body.innerHTML = backup;
+    }
+    </script>
+
+
+
+    
+
+</body>
+</html>
